@@ -1,0 +1,15 @@
+* Ninject IOC Implementieren
+
+* EnterpriseFramework Lib erstellen
+
+* ViewModelTreeNavigation erstellen 
+		Holt sich per IOC alle Screens und liefert die Screens als Baumstruktur zurück.
+
+* TreeView der Screens anzeigen
+
+* Screen-Switching
+
+* Breadcrump-Navigation Control einbauen
+
+* Offen: Stammdaten ist ein Parent-View ohne Funktionalität - UserControl an die Childs-Collection binden und im View platzieren?
+
