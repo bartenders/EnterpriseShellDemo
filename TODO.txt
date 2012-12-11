@@ -13,3 +13,8 @@
 
 * Offen: Stammdaten ist ein Parent-View ohne Funktionalität - UserControl an die Childs-Collection binden und im View platzieren?
 
+* MetroStyle einfügen
+
+* Weitere Module über externe DLLs laden
+
+* 
