@@ -6,10 +6,10 @@
 
     public interface IShellScreen : IScreen
     {
-        string LargeIcon { get; set; }
-        string SmallIcon { get; set; }
-        string Description { get; set; }
+        string LargeIcon { get; }
+        string SmallIcon { get; }
+        string Description { get; }
 
-        IEnumerable<IShellScreen> Childs { get; set; }
+        IEnumerable<IShellScreen> Childs { get;  }
     }
 }

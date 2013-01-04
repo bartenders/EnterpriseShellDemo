@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Interfaces\IShellScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShellScreenBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
