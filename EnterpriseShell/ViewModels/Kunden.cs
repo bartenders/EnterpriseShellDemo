@@ -1,7 +1,7 @@
-﻿using EnterpriseShell.Framework;
-
-namespace EnterpriseShell.ViewModels
+﻿namespace EnterpriseShell.ViewModels
 {
+    using EnterpriseFramework;
+
     public class Kunden : ShellScreenBase
     {
 

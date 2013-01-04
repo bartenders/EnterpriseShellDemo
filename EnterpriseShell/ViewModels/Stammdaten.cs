@@ -1,6 +1,7 @@
-﻿using EnterpriseShell.Framework;
-namespace EnterpriseShell.ViewModels
+﻿namespace EnterpriseShell.ViewModels
 {
+    using EnterpriseFramework;
+
     public class Stammdaten : ShellScreenBase
     {
 

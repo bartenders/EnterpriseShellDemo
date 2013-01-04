@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Framework\ShellScreenBase.cs" />
     <Compile Include="Interfaces\IShellScreen.cs" />
     <Compile Include="NinjectModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -110,6 +109,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnterpriseFramework\EnterpriseFramework.csproj">
+      <Project>{ec00b535-3bb9-411f-8470-e9ac7a121007}</Project>
+      <Name>EnterpriseFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
