@@ -1,5 +1,3 @@
-* EnterpriseFramework Lib erstellen
-
 * ViewModelTreeNavigation erstellen 
 		Holt sich per IOC alle Screens und liefert die Screens als Baumstruktur zurück.
 
@@ -14,5 +12,3 @@
 * MetroStyle einfügen
 
 * Weitere Module über externe DLLs laden
-
-* 
