@@ -4,12 +4,26 @@
 
     using Caliburn.Micro;
 
-    using EnterpriseFramework;
     using EnterpriseFramework.Interfaces;
 
     public class Konten : Screen, IShellScreen
     {
+        private List<IShellScreen> children;
+
+        public List<IShellScreen> Children
+        {
+            get
+            {
+                return this.children;
+            }
+        }
+
         public string LargeIcon { get; private set; }
+
+        public Konten()
+        {
+            this.children = new List<IShellScreen>();
+        }
 
         public string SmallIcon { get; private set; }
 
@@ -17,10 +31,15 @@
         {
             get
             {
-                return "Edit Accounts here";
+                return "Hier Konten";
             }
         }
 
-        public IEnumerable<IShellScreen> Childs { get; private set; }
+        public IShellScreen AddChild(IShellScreen child)
+        {
+            this.children.Add(child);
+            this.NotifyOfPropertyChange(() => Children);
+            return this;
+        }
     }
 }

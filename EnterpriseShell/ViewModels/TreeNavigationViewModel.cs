@@ -12,26 +12,17 @@
         public TreeNavigationViewModel()
         {
             var list = IoC.GetAllInstances(typeof(IShellScreen));
-
             this.screens = list.Cast<IShellScreen>();
-            this.NotifyOfPropertyChange(() => this.ScreenNames);
+            this.NotifyOfPropertyChange(() => this.Screens);
         }
 
         private IEnumerable<IShellScreen> screens;
 
-        public IEnumerable<string> ScreenNames
+        public IEnumerable<IShellScreen> Screens
         {
             get
             {
-                var enumerable = this.screens;
-
-                if (enumerable != null)
-                {
-                    foreach (var screen in enumerable)
-                    {
-                        yield return screen.Description;
-                    }
-                }
+                return this.screens;
             }
         }
     }

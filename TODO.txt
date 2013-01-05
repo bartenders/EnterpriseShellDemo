@@ -1,9 +1,15 @@
 * ViewModelTreeNavigation erstellen 
-		Holt sich per IOC alle Screens und liefert die Screens als Baumstruktur zurück.
 
-* TreeView der Screens anzeigen
+	TODO: 
+		Wie baut man die Hierachie am besten auf?
+		Bei Child auch den Parent setzen
+		Im Tree sollten nur Elemente angezeigt werden die keinen Parent haben.
+		Icons setzen
+		Aktivieren der Screens implementieren.
+		Lokalisierung der Description?
+		Name
+		Children von Children support
 
-* Screen-Switching
 
 * Breadcrump-Navigation Control einbauen
 

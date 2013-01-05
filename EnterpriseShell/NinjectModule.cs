@@ -6,6 +6,7 @@
 
     using EnterpriseShell.ViewModels;
     using Ninject;
+    using System.Linq;
     using Ninject.Modules;
 
     public class NinjectModule : INinjectModule
@@ -23,9 +24,22 @@
             kernel.Bind<ShellViewModel>().ToSelf().InSingletonScope();
 
             // Business Components...
-            kernel.Bind<IShellScreen>().To<Konten>().InSingletonScope();
+            //kernel.Bind<IShellScreen>().To<Konten>().InSingletonScope();
             kernel.Bind<IShellScreen>().To<Kunden>().InSingletonScope();
             kernel.Bind<IShellScreen>().To<Stammdaten>().InSingletonScope();
+
+            // HAck! How to set up?
+            var iShellScreens = kernel.GetAll<IShellScreen>();
+
+            foreach (var iShellScreen in iShellScreens)
+            {
+                var stamm = iShellScreen as Stammdaten;
+
+                if (stamm != null)
+                {
+                    stamm.AddChild(new Konten());
+                }
+            }
         }
 
         public void OnUnload(IKernel kernel)

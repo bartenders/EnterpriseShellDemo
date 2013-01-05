@@ -90,6 +90,9 @@
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TreeItemView.xaml.cs">
+      <DependentUpon>TreeItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TreeNavigationView.xaml.cs">
       <DependentUpon>TreeNavigationView.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TreeItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

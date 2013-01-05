@@ -10,6 +10,8 @@
         string SmallIcon { get; }
         string Description { get; }
 
-        IEnumerable<IShellScreen> Childs { get;  }
+        IShellScreen AddChild(IShellScreen child);
+
+        List<IShellScreen> Children { get;  }
     }
 }

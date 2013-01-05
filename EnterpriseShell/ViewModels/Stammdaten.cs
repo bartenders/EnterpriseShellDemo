@@ -4,12 +4,26 @@
 
     using Caliburn.Micro;
 
-    using EnterpriseFramework;
     using EnterpriseFramework.Interfaces;
 
     public class Stammdaten : Screen, IShellScreen
     {
+        private List<IShellScreen> children;
+
+        public List<IShellScreen> Children
+        {
+            get
+            {
+                return this.children;
+            }
+        }
+
         public string LargeIcon { get; private set; }
+
+        public Stammdaten()
+        {
+            this.children = new List<IShellScreen>();
+        }
 
         public string SmallIcon { get; private set; }
 
@@ -21,7 +35,13 @@
             }
         }
 
+        public IShellScreen AddChild(IShellScreen child)
+        {
+            this.children.Add(child);
+            this.NotifyOfPropertyChange(() => Children);
+            return this;
+        }
 
-        public IEnumerable<IShellScreen> Childs { get; private set; }
+
     }
 }
